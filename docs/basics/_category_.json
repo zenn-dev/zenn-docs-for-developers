@@ -1,0 +1,8 @@
+{
+  "label": "Basics",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "プロジェクトの全体像など、開発に必要な前提知識を提供します。"
+  }
+}
