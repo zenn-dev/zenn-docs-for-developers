@@ -44,7 +44,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/zenn-dev/zenn-docs-for-developers/tree/main/docs/',
+          editUrl: 'https://github.com/zenn-dev/zenn-docs-for-developers/tree/main/',
         },
         // blog: {
         //   showReadingTime: true,
