@@ -1,4 +1,18 @@
-# Website
+# zenn-docs-for-developers
+
+Zennの開発者向けドキュメントのリポジトリです。
+
+このドキュメントは [Docusaurus](https://docusaurus.io/) により作成され、GitHub Pagesにデプロイされています。
+
+ドキュメントを読む場合は以下にアクセスしてください。
+
+https://zenn-dev.github.io/zenn-docs-for-developers/
+
+## デプロイ
+
+GitHub Actionsにより、mainブランチにpushされると自動的にGitHub Pagesにデプロイされます。
+
+## Docusaurusの使い方
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
