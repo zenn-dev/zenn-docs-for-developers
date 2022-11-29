@@ -24,6 +24,19 @@ zenn-cli は記事や本のテンプレートを作成するコマンドツー�
 
 `yarn dev` を実行することでクライアントとサーバーが起動します。クライアントは [vite](https://vitejs.dev/) でホスティングされ、サーバーはExpressサーバーを [nodemon](https://nodemon.io/) で監視することで、ホットリロードを実現します。
 
+### その他のコマンドを開発環境で動かす
+
+`yarn build` でビルドを実行したうえで、`yarn zenn **` コマンドを実行します。
+
+```shell
+$ yarn build
+$ yarn zenn # = npx zenn
+$ yarn zenn preview # = npx zenn preview (.mdの変更に伴うホットリロードも有効になります)
+$ yarn zenn new:article --slug foo-bar-baz-qux # = npx zenn new:article --slug foo-bar-baz-qux
+$ yarn zenn new:book --slug foo-bar-baz-qux # = npx zenn new:book --slug foo-bar-baz-qux
+$ yarn zenn --help # = npx zenn --help
+```
+
 ## ビルド
 
 `yarn build` で `./dist` に生成されたファイルをnpmのリリース時に含めるようにします。（ `package.json` の `files` に指定）
