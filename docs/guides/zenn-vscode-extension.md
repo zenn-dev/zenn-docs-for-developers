@@ -23,10 +23,6 @@ VSCode の Web エディタ（github.dev など）で、Zenn の記事や本を�
 $> yarn install
 ```
 
-:::note
-この時、[VSCode Insiders](https://code.visualstudio.com/insiders/) がインストールされます。
-:::
-
 ## 開発環境
 
 [セットアップ](#セットアップ)が正常に完了したあと、以下のコマンドを実行することでブラウザが開き拡張をローカル環境で試すことができます。
@@ -49,6 +45,14 @@ VSCode 上でデバッグビューを開き、`Run Web Extension` を選択し�
 次に `F5` キーまたはデバッグ実行ボタンを押すと、別の VSCode ウィンドウが開きます。
 
 ![](./img/vscode-extension/debugging-window.png)
+
+もしフォルダーが開かれていない場合や、任意のフォルダーを開きたい場合は、`フォルダーを開く` から任意のフォルダーを選択して開きます。
+
+![](./img/vscode-extension/open-folder.png)
+
+:::note
+デフォルトではリポジトリ内の `./examples` が開かれます
+:::
 
 ### ブレークポイントを打ちたい場合
 
@@ -83,7 +87,7 @@ VSCode 上でデバッグビューを開き、`Run Web Extension` を選択し�
 ## ブランチ
 
 - `canary`: 開発用のブランチです。通常はこのブランチから新しいブランチを切って Pull Request を作成します。
-- `main`: リリース用のブランチです。通常は`canary`ブランチからのみマージを受け付けます。このブランチに Pull Request をマージすると、`X.Y.Z`のようなバージョンが自動的にリリースされます。
+- `main`: リリース用のブランチです。通常は`canary`ブランチからのみマージを受け付けます。
 
 ## リリースについて
 
@@ -93,4 +97,4 @@ VSCode 上でデバッグビューを開き、`Run Web Extension` を選択し�
 2. `release:patch`, `release:minor`, `release:major` のいずれかのラベルを Pull Request に付与します
 3. ラベルが付与されるとバージョンアップコミットが Pull Request に追加されます
 4. Pull Request をマージします ( ※ バージョンアップコミットが含まれていないとマージできません )
-5. GitHub Actions によって、自動的に拡張がリリースされます
+5. GitHub Actions によって、自動的に VSCode 拡張がリリースされます
