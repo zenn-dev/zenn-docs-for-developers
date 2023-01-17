@@ -12,12 +12,12 @@
 
 ## ビルド
 
-`yarn build` で実行します。
+`pnpm build` で実行します。
 
 ## テスト
 
-`yarn test` で実行します。
+`pnpm test` で実行します。
 
 ## lint
 
-`yarn lint:fix` で実行します。
+`pnpm lint:fix` で実行します。

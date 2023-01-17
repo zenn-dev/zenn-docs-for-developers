@@ -8,14 +8,14 @@ zenn-editor リポジトリは [lerna](https://github.com/lerna/lerna) による
 
 それぞれのプロジェクトは `./packages` に配置されています。
 
-リポジトリをクローンし、プロジェクトルートで `yarn install` を実行することで、`./packages` にある全てのプロジェクトの依存モジュールがインストールされます。
+リポジトリをクローンし、プロジェクトルートで `pnpm install` を実行することで、`./packages` にある全てのプロジェクトの依存モジュールがインストールされます。
 
 ```shell
 $ git clone https://github.com/zenn-dev/zenn-editor.git
-$ yarn install
+$ pnpm install
 ```
 
-同様に、テストやビルドもプロジェクトのルートで `yarn test`、`yarn build` を実行することで、`./packages` にある全てのプロジェクトに対して行うことができます。これは依存するモジュールに対するテストや動作確認をしたい時に便利です。
+同様に、テストやビルドもプロジェクトのルートで `pnpm test`、`pnpm build` を実行することで、`./packages` にある全てのプロジェクトに対して行うことができます。これは依存するモジュールに対するテストや動作確認をしたい時に便利です。
 
 ## ブランチ
 

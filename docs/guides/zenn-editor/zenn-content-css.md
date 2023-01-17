@@ -16,11 +16,11 @@ zenn-content-css は、 zenn-markdown-html で markdown から変換された HT
 
 ## 開発環境
 
-`yarn dev` を実行することで、変更を検出して自動的に `./lib/index.css` にビルドファイルが生成されます。
+`pnpm dev` を実行することで、変更を検出して自動的に `./lib/index.css` にビルドファイルが生成されます。
 
 ## ビルド
 
-`yarn build` で実行します。
+`pnpm build` で実行します。
 
 ## テスト
 
