@@ -132,7 +132,7 @@ zenn-embed-elements で変換された HTML:
 
 ## ビルド
 
-`yarn build` で実行します。
+`pnpm build` で実行します。
 
 ## テスト
 
@@ -140,4 +140,4 @@ zenn-embed-elements で変換された HTML:
 
 ## lint
 
-`yarn lint:fix` で実行します。
+`pnpm lint:fix` で実行します。
