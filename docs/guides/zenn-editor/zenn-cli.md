@@ -18,7 +18,7 @@ zenn-cli は記事や本のテンプレートを作成するコマンドツー�
 - `zenn-content-css`
 - `zenn-embed-elements`
 - `zenn-markdown-html`
-- `zenn-validator`
+- `zenn-model`
 
 ## 開発環境
 
