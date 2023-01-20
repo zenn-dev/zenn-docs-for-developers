@@ -16,7 +16,7 @@ sidebar_position: 2
 - [zenn-content-css](https://github.com/zenn-dev/zenn-editor/tree/main/packages/zenn-content-css)
 - [zenn-embed-elements](https://github.com/zenn-dev/zenn-editor/tree/main/packages/zenn-embed-elements)
 - [zenn-markdown-html](https://github.com/zenn-dev/zenn-editor/tree/main/packages/zenn-markdown-html)
-- [zenn-validator](https://github.com/zenn-dev/zenn-editor/tree/main/packages/zenn-validator)
+- [zenn-model](https://github.com/zenn-dev/zenn-editor/tree/main/packages/zenn-model)
 
 ## zenn-vscode-extension
 

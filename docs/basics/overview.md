@@ -32,13 +32,13 @@ flowchart TD
 
     zenn-cli-->zenn-markdown-html
     zenn-cli-->zenn-content-css
-    zenn-cli-->zenn-validator
+    zenn-cli-->zenn-model
     zenn-cli-->zenn-embed-elements
     zenn-cli-.http.->embed.zenn.studio
 
     zenn-vscode-extension-->zenn-markdown-html
     zenn-vscode-extension-->zenn-content-css
-    zenn-vscode-extension-->zenn-validator
+    zenn-vscode-extension-->zenn-model
     zenn-vscode-extension-->zenn-embed-elements
     zenn-vscode-extension-.http.->embed.zenn.studio
 
@@ -107,8 +107,8 @@ markdownをZennで表示可能なHTMLに変換するパッケージです。
 
 [GitHubリポジトリ](https://github.com/zenn-dev/zenn-editor/tree/main/packages/zenn-markdown-html)
 
-### zenn-validator
+### zenn-model
 
-markdownの内容（frontmatterなどZennの仕様）を検証するパッケージです。
+zenn で扱うデータのユーティリティ型や関数をまとめたパッケージです。
 
-[GitHubリポジトリ](https://github.com/zenn-dev/zenn-editor/tree/main/packages/zenn-validator)
+[GitHubリポジトリ](https://github.com/zenn-dev/zenn-editor/tree/main/packages/zenn-model)
