@@ -26,15 +26,15 @@ zenn-cli は記事や本のテンプレートを作成するコマンドツー�
 
 ### その他のコマンドを開発環境で動かす
 
-`pnpm build` でビルドを実行したうえで、`pnpm zenn **` コマンドを実行します。
+`pnpm build` でビルドを実行したうえで、`pnpm exec:zenn **` コマンドを実行します。
 
 ```shell
 $ pnpm build
-$ pnpm zenn # = npx zenn
-$ pnpm zenn preview # = npx zenn preview (.mdの変更に伴うホットリロードも有効になります)
-$ pnpm zenn new:article --slug foo-bar-baz-qux # = npx zenn new:article --slug foo-bar-baz-qux
-$ pnpm zenn new:book --slug foo-bar-baz-qux # = npx zenn new:book --slug foo-bar-baz-qux
-$ pnpm zenn --help # = npx zenn --help
+$ pnpm exec:zenn # = npx zenn
+$ pnpm exec:zenn preview # = npx zenn preview (.mdの変更に伴うホットリロードも有効になります)
+$ pnpm exec:zenn new:article --slug foo-bar-baz-qux # = npx zenn new:article --slug foo-bar-baz-qux
+$ pnpm exec:zenn new:book --slug foo-bar-baz-qux # = npx zenn new:book --slug foo-bar-baz-qux
+$ pnpm exec:zenn --help # = npx zenn --help
 ```
 
 ## ビルド
@@ -61,4 +61,6 @@ zenn-cli では、依存関係（package.json の dependencies）を無くすた
 
 ## lint
 
-`pnpm lint:fix` で実行します。
+`pnpm lint` で実行します。
+厳密にチェックしたい場合は `pnpm strict:lint` を実行します。
+また、Linter などの警告を修正したい場合は `pnpm fix` を実行します。
