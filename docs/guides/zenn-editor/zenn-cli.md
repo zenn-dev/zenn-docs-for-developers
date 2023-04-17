@@ -37,6 +37,20 @@ $ pnpm zenn new:book --slug foo-bar-baz-qux # = npx zenn new:book --slug foo-bar
 $ pnpm zenn --help # = npx zenn --help
 ```
 
+### 環境変数を設定する
+
+zenn-cli ではビルドに必要な情報の一部を環境変数で設定します。
+開発中に全ての機能を使いたい場合は、`./packages/zenn-cli/.env` ファイルを作成し以下のように設定します。
+
+```bash
+# 埋め込みサーバーのオリジン(viteにも対応するために`VITE_`をつけてます)
+VITE_EMBED_SERVER_ORIGIN="https://embed.zenn.studio"
+```
+
+:::caution
+環境変数の値は、zenn-cli (または zenn-editor) の開発目的でのみ使用してください。
+:::
+
 ## ビルド
 
 `pnpm build` で `./dist` に生成されたファイルをnpmのリリース時に含めるようにします。（ `package.json` の `files` に指定）
