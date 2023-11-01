@@ -12,12 +12,16 @@ zenn-editor リポジトリは [pnpm](https://pnpm.io/ja/) + [Turborepo](https:/
 
 ```shell
 $ git clone https://github.com/zenn-dev/zenn-editor.git
+
+# pnpmをcorepackでインストールする場合は以下を実行
+$ corepack enable pnpm
+
 $ pnpm install
 ```
 
-:::caution
-上記のコマンドを実行するには、事前に pnpm のインストールが必要です。<br />
-インストール方法: https://pnpm.io/ja/installation
+:::note
+pnpm のインストールには corepack を使用することを推奨します。<br />
+corepack を使用しない場合は、corepack の[インストール方法](https://pnpm.io/ja/installation)を参照してインストールしてください。
 :::
 
 
