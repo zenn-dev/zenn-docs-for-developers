@@ -14,26 +14,47 @@ VSCode の Web エディタ（github.dev など）で、Zenn の記事や本を�
 
 詳細な使い方は [README](https://github.com/zenn-dev/zenn-vscode-extension#readme) を参照して下さい。
 
-## セットアップ
+## ブランチ
 
-このリポジトリでは yarn を用いてパッケージ管理を行っています。
+- `canary`: 開発用のブランチです。通常はこのブランチから新しいブランチを切って Pull Request を作成します。
+- `main`: リリース用のブランチです。通常は`canary`ブランチからのみマージを受け付けます。
+
+## リリースについて
+
+リリース手順は以下のようになります。
+
+1. `canary` ブランチから `main` ブランチに対して Pull Request を作成します。
+2. `release:patch`, `release:minor`, `release:major` のいずれかのラベルを Pull Request に付与します
+3. ラベルが付与されるとバージョンアップコミットが Pull Request に追加されます
+4. Pull Request をマージします ( ※ バージョンアップコミットが含まれていないとマージできません )
+5. GitHub Actions によって、自動的に VSCode 拡張がリリースされます
+
+
+## 開発環境
+### セットアップ
+
+このリポジトリでは pnpm を用いてパッケージ管理を行っています。
 以下のコマンドを実行することで、必要なパッケージをインストールすることができます。
 
 ```shell
-$> yarn install
+$> pnpm install
 ```
 
-## 開発環境
-
-[セットアップ](#セットアップ)が正常に完了したあと、以下のコマンドを実行することでブラウザが開き拡張をローカル環境で試すことができます。
+セットアップが正常に完了したあと、以下のコマンドを実行することでブラウザが開き拡張をローカル環境で試すことができます。
 
 ```shell
-$> yarn dev
+$> pnpm dev
 ```
+
+:::note
+このとき、[VSCode Insiders](https://code.visualstudio.com/insiders/) がインストールされます。
+:::
+
+上記のコマンドを実行すると、以下の画像のようなブラウザが開き、このリポジトリ内の `./examples` 内を表示されます。
 
 ![](./img/vscode-extension/yarn-dev-preview.png)
 
-## デバッグ方法
+### デバッグ方法
 
 VSCode を使用している場合は [VSCode のデバッグ機能](https://code.visualstudio.com/docs/editor/debugging) を使用することで、
 使用している VSCode 上で拡張機能を試すこともできます。
@@ -42,7 +63,7 @@ VSCode 上でデバッグビューを開き、`Run Web Extension` を選択し�
 
 ![](./img/vscode-extension/debug-start.png)
 
-次に `F5` キーまたはデバッグ実行ボタンを押すと、別の VSCode ウィンドウが開きます。
+次に `F5` キーまたはデバッグ実行ボタンを押すと、別の VSCode ウィンドウが開き、そこでデバッグすることができます。
 
 ![](./img/vscode-extension/debugging-window.png)
 
@@ -54,7 +75,7 @@ VSCode 上でデバッグビューを開き、`Run Web Extension` を選択し�
 デフォルトではリポジトリ内の `./examples` が開かれます
 :::
 
-### ブレークポイントを打ちたい場合
+#### ブレークポイントを打ちたい場合
 
 リポジトリを開いている VSCode で、停止したい箇所にブレークポイントを打ちます。
 
@@ -80,21 +101,7 @@ VSCode 上でデバッグビューを開き、`Run Web Extension` を選択し�
 
 デバッグ中は Hot Reload が有効ですが、変更を適用するには Zenn の拡張がインストールされている VSCode ウィンドウで `Developer: Reload Window` を実行する必要があります。
 
-## ビルド
 
-`yarn package-web` コマンドを実行することで、`./dist` にビルド結果が生成されます。
+### ビルド
 
-## ブランチ
-
-- `canary`: 開発用のブランチです。通常はこのブランチから新しいブランチを切って Pull Request を作成します。
-- `main`: リリース用のブランチです。通常は`canary`ブランチからのみマージを受け付けます。
-
-## リリースについて
-
-リリース手順は以下のようになります。
-
-1. `canary` ブランチから `main` ブランチに対して Pull Request を作成します。
-2. `release:patch`, `release:minor`, `release:major` のいずれかのラベルを Pull Request に付与します
-3. ラベルが付与されるとバージョンアップコミットが Pull Request に追加されます
-4. Pull Request をマージします ( ※ バージョンアップコミットが含まれていないとマージできません )
-5. GitHub Actions によって、自動的に VSCode 拡張がリリースされます
+`pnpm package-web` コマンドを実行することで、`./dist` にビルド結果が生成されます。
