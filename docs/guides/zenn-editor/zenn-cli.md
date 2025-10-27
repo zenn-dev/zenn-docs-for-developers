@@ -29,6 +29,7 @@ zenn-cli は記事や本のテンプレートを作成するコマンドツー�
 `pnpm build` でビルドを実行したうえで、`pnpm -C ./packages/zenn-cli exec:zenn **` コマンドを実行します。
 
 ```shell
+# すべてプロジェクトルートで実行
 $ pnpm build
 $ pnpm -C ./packages/zenn-cli exec:zenn # = npx zenn
 $ pnpm -C ./packages/zenn-cli exec:zenn preview # = npx zenn preview (.mdの変更に伴うホットリロードも有効になります)
