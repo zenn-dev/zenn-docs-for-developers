@@ -24,8 +24,13 @@ pnpm のインストールには corepack を使用することを推奨しま�
 corepack を使用しない場合は、corepack の[インストール方法](https://pnpm.io/ja/installation)を参照してインストールしてください。
 :::
 
-
 同様に、テストやビルドもプロジェクトのルートで `pnpm test`、`pnpm build` を実行することで、`./packages` にある全てのプロジェクトに対して行うことができます。これは依存するモジュールに対するテストや動作確認をしたい時に便利です。
+
+AIコーディングエージェント向けのファイル管理には[rulesync](https://github.com/dyoshikawa/rulesync)を使用しています。次のコマンドを実行することで、主要なAIコーディングエージェントに対応した設定ファイルが生成されます。
+
+```bash
+npx rulesync generate
+```
 
 ## ブランチ
 
