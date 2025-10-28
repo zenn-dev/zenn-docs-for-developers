@@ -26,21 +26,28 @@ zenn-cli は記事や本のテンプレートを作成するコマンドツー�
 
 ### その他のコマンドを開発環境で動かす
 
-`pnpm build` でビルドを実行したうえで、`pnpm exec:zenn **` コマンドを実行します。
+`pnpm build` でビルドを実行したうえで、`pnpm -C ./packages/zenn-cli exec:zenn **` コマンドを実行します。
 
 ```shell
+# すべてプロジェクトルートで実行
 $ pnpm build
-$ pnpm exec:zenn # = npx zenn
-$ pnpm exec:zenn preview # = npx zenn preview (.mdの変更に伴うホットリロードも有効になります)
-$ pnpm exec:zenn new:article --slug foo-bar-baz-qux # = npx zenn new:article --slug foo-bar-baz-qux
-$ pnpm exec:zenn new:book --slug foo-bar-baz-qux # = npx zenn new:book --slug foo-bar-baz-qux
-$ pnpm exec:zenn --help # = npx zenn --help
+$ pnpm -C ./packages/zenn-cli exec:zenn # = npx zenn
+$ pnpm -C ./packages/zenn-cli exec:zenn preview # = npx zenn preview (.mdの変更に伴うホットリロードも有効になります)
+$ pnpm -C ./packages/zenn-cli exec:zenn new:article --slug foo-bar-baz-qux # = npx zenn new:article --slug foo-bar-baz-qux
+$ pnpm -C ./packages/zenn-cli exec:zenn new:book --slug foo-bar-baz-qux # = npx zenn new:book --slug foo-bar-baz-qux
+$ pnpm -C ./packages/zenn-cli exec:zenn --help # = npx zenn --help
 ```
 
 ### 環境変数を設定する
 
 zenn-cli ではビルドに必要な情報の一部を環境変数で設定します。
 開発中に全ての機能を使いたい場合は、`./packages/zenn-cli/.env` ファイルを作成し以下のように設定します。
+
+```bash
+cp ./packages/zenn-cli/.env.example ./packages/zenn-cli/.env
+```
+
+内容は以下のようになります。
 
 ```bash
 # 埋め込みサーバーのオリジン(viteにも対応するために`VITE_`をつけてます)
@@ -61,7 +68,7 @@ $ pnpm build
 
 ### webpackの使用について
 
-zenn-cli では、依存関係（package.json の dependencies）を無くすため [webpack](https://webpack.js.org) でバンドルしたファイルをリリースしています。
+zenn-cli では、依存関係（package.json の dependencies）を無くすため [webpack](https://webpack.js.org)互換の[rspack](https://rspack.rs/)でバンドルしたファイルをリリースしています。
 
 依存関係を無くす理由は以下の通りです。
 

@@ -24,8 +24,13 @@ pnpm のインストールには corepack を使用することを推奨しま�
 corepack を使用しない場合は、corepack の[インストール方法](https://pnpm.io/ja/installation)を参照してインストールしてください。
 :::
 
-
 同様に、テストやビルドもプロジェクトのルートで `pnpm test`、`pnpm build` を実行することで、`./packages` にある全てのプロジェクトに対して行うことができます。これは依存するモジュールに対するテストや動作確認をしたい時に便利です。
+
+AIコーディングエージェント向けのファイル管理には[rulesync](https://github.com/dyoshikawa/rulesync)を使用しています。次のコマンドを実行することで、主要なAIコーディングエージェントに対応した設定ファイルが生成されます。
+
+```bash
+npx rulesync generate
+```
 
 ## ブランチ
 
@@ -72,3 +77,8 @@ zenn-editor では、ビルドやテストなどを実行する時に使用し�
 [lerna](https://lerna.js.org/) から `version` と `publish` 機能だけを抜き出したバージョン管理ツールです。
 基本的な使い方は lerna と一緒ですが、多くの Monorepo 機能はデフォルトでは含まれていないことに注意してください。
 zenn-editor では、workspace をリリースする際に使用しています。
+
+## 動作確認
+
+- `zenn-cli` は `zenn-content-css` `zenn-embed-elements` `zenn-markdown-html` `zenn-model` に依存しているため、 `zenn-cli` の動作確認をすることで、これらのパッケージの動作確認も行うことができます。
+    - `zenn-cli` の動作確認方法は [zenn-cli](./zenn-cli.md) を参照してください。
