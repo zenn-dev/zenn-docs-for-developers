@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkzenn_docs_for_developers||=[]).push([[8729],{1912(e){e.exports=JSON.parse('{"metadata":{"permalink":"/zenn-docs-for-developers/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":0,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
