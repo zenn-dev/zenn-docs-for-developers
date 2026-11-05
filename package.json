@@ -47,5 +47,5 @@
     "npm": "use pnpm please!",
     "yarn": "use pnpm please!"
   },
-  "packageManager": "pnpm@10.24.0"
+  "packageManager": "pnpm@10.34.9"
 }

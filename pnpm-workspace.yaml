@@ -2,9 +2,16 @@ packages: []
 
 minimumReleaseAge: 1440
 
-# Docusaurus 3.10.2 の依存範囲では脆弱性の修正版に届かないため、修正版を指定する
-# - tinypool: GHSA-5gmw-xhrv-c9v3, GHSA-85c8-ppgw-ccpr（@docusaurus/core が ^1.0.2 を要求）
-# - serialize-javascript: GHSA-5c6j-r48x-rmvq ほか（copy-webpack-plugin 11 が ^6.0.0 を要求）
+# core-js の postinstall はメッセージを表示するだけなので実行しない
+ignoredBuiltDependencies:
+  - core-js
+
+# Docusaurus 3.10.2 の依存範囲では脆弱性の修正版に届かないため、修正版を指定する。
+# Docusaurus 側の依存範囲が修正版を含むようになったら外す。
+# - tinypool: GHSA-5gmw-xhrv-c9v3, GHSA-85c8-ppgw-ccpr
+#   （@docusaurus/core が ^1.0.2 を要求。future.experimental_faster.ssgWorkerThreads が有効なときだけ使われる）
+# - serialize-javascript: GHSA-5c6j-r48x-rmvq ほか
+#   （copy-webpack-plugin 11 と css-minimizer-webpack-plugin 5 が ^6.0.0 を要求）
 overrides:
   tinypool: ^2.2.0
   serialize-javascript: ^7.1.4
