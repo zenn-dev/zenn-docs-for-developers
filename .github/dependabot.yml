@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=https://json.schemastore.org/dependabot-2.0.json
+version: 2
+updates:
+  # npm の依存関係（pnpm でも npm と書く）
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    cooldown:
+      default-days: 5
+    open-pull-requests-limit: 2
+    # @docusaurus/* は同じ版に揃える必要があるため、まとめて更新する
+    groups:
+      npm-minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+      npm-major:
+        patterns:
+          - "*"
+        update-types:
+          - "major"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    assignees:
+      - "cm-dyoshikawa"
+      - "cm-wada-yusuke"
+      - "cm-igarashi-ryosuke"
+
+  # GitHub Actions の依存関係
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    cooldown:
+      default-days: 5
+    open-pull-requests-limit: 1
+    groups:
+      all-actions:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    assignees:
+      - "cm-dyoshikawa"
+      - "cm-wada-yusuke"
+      - "cm-igarashi-ryosuke"
