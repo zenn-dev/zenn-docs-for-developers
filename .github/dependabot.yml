@@ -7,7 +7,7 @@ updates:
     schedule:
       interval: "monthly"
     cooldown:
-      default-days: 5
+      default-days: 1
     open-pull-requests-limit: 2
     # @docusaurus/* は同じ版に揃える必要があるため、まとめて更新する
     groups:
@@ -36,7 +36,7 @@ updates:
     schedule:
       interval: "monthly"
     cooldown:
-      default-days: 5
+      default-days: 1
     open-pull-requests-limit: 1
     groups:
       all-actions:
